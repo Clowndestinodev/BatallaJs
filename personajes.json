@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Guerrero",
+    "vida": 120,
+    "mana": 40,
+    "ataque": 10,
+    "imagen": "imagenes/Guerrero.jpeg"
+  },
+  {
+    "id": 2,
+    "nombre": "Mago",
+    "vida": 80,
+    "mana": 100,
+    "ataque": 8,
+    "imagen": "Mago.jpeg"
+  },
+  {
+    "id": 3,
+    "nombre": "Arquero",
+    "vida": 90,
+    "mana": 60,
+    "ataque": 12,
+    "imagen": "Mago.jpeg"
+  }
+]

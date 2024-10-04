@@ -1,0 +1,73 @@
+/* Estilos personalizados */
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#atributos-jugador,
+#atributos-demonio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+#combat-log {
+  height: 250px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #0f0f0f;
+}
+
+.mensaje {
+  font-style: italic;
+  font-size: 300px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 1000;
+}
+
+p {
+  font-family: "MedievalSharp", serif;
+  background-size: cover;
+  background-position: center;
+  color: #ffcc00;
+}
+
+body {
+  background-image: url("imagenes/Fondo\ medieval\ floral.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  font-family: "MedievalSharp", serif;
+  text-align: center;
+  color: antiquewhite;
+  font-size: 70px;
+}
+
+footer {
+  background: linear-gradient(135deg, #0b0d12, #2a2d35);
+  border-top: 3px solid #f5f3f3;
+}
+
+footer a {
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: #a5870d;
+}
+
+footer h5 {
+  color: #ffcc00;
+}

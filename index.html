@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Batalla de Midgart</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>La Batalla De Midgart</h1>
+      </nav>
+    </header>
+    <div
+      class="modal fade"
+      id="bienvenidaModal"
+      tabindex="-1"
+      aria-labelledby="bienvenidaModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="bienvenidaModalLabel">Bienvenido</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">¡Bienvenido al juego de combate!</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="game-area" class="d-none"></div>
+    <h1 id="game-title"></h1>
+    <div id="actions"></div>
+    <div id="combat-log"></div>
+    <div id="atributos-jugador"></div>
+    <div id="atributos-demonio"></div>
+    <div
+      id="character-selection"
+      class="d-flex justify-content-center align-items-center"
+      style="height: 100vh"
+    ></div>
+    <div
+      id="contenedor-enemigos"
+      class="d-flex justify-content-center align-items-center"
+      style="height: 100vh"
+    ></div>
+    <section id="game-guide" class="my-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Guía de Combate</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Objetivo del Juego</h4>
+            <p>
+              Tu misión es enfrentarte a poderosos enemigos, como el Dragón
+              Negro Adulto, y derrotarlos en combates épicos por turnos. Debes
+              usar tus habilidades de ataque, defensa y curación
+              estratégicamente para sobrevivir y ganar.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <h4>Controles del Juego</h4>
+            <ul>
+              <li>
+                <strong>Atacar:</strong> Inflige daño al enemigo con tu poder de
+                ataque.
+              </li>
+              <li>
+                <strong>Defender:</strong> Bloquea una parte del daño y recupera
+                algo de vida.
+              </li>
+              <li>
+                <strong>Curar:</strong> Usa mana para restaurar una cantidad de
+                tu vida.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <h4>Personajes</h4>
+            <p>Cada personaje tiene habilidades únicas:</p>
+            <ul>
+              <li>
+                <strong>Guerrero:</strong> Alto en vida y ataque, pero bajo en
+                mana.
+              </li>
+              <li>
+                <strong>Mago:</strong> Poderoso en mana y habilidades mágicas,
+                pero frágil en combate cuerpo a cuerpo.
+              </li>
+              <li>
+                <strong>Arquero:</strong> Equilibrado, con ataques a distancia
+                precisos y velocidad.
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h4>Consejos</h4>
+            <ul>
+              <li>¡Usa la defensa sabiamente para sobrevivir más tiempo!</li>
+              <li>
+                El mana es valioso. Adminístralo bien para poder curarte en
+                momentos clave.
+              </li>
+              <li>
+                ¡Planifica tus ataques! No solo ataques sin pensar, mantén tu
+                vida y mana controlados.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="dragon-story" class="my-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Historia del Dragón</h2>
+        <p>
+          En lo más profundo de las montañas de Midgart, yace el legendario
+          Dragón Negro Adulto. Durante siglos, ha estado dormido, acumulando su
+          poder en la oscuridad. Se dice que su aliento es tóxico, su piel es
+          impenetrable, y su ira puede destruir reinos enteros.
+        </p>
+        <p>
+          En tiempos antiguos, los héroes de la primera era intentaron
+          derrotarlo, pero pocos sobrevivieron para contar la historia. Ahora,
+          tras siglos de silencio, el dragón ha despertado, más poderoso y
+          furioso que nunca, listo para sumergir el mundo en sombras.
+        </p>
+        <p>
+          Solo los más valientes podrán enfrentarse a él y restaurar la paz en
+          Midgart. ¡El destino del reino está en tus manos!
+        </p>
+      </div>
+    </section>
+
+    <footer id="Creditos" class="bg-dark text-white py-4 mt-5">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-4">
+            <h5 class="mb-3">Reinos de Midgart</h5>
+            <p>
+              Adéntrate en un mundo de magia y acero donde héroes se alzan para
+              desafiar a bestias legendarias. ¡La batalla final contra el Dragón
+              Negro Adulto te espera!
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5 class="mb-3">Enlaces Útiles</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#game-guide" class="text-white">Guía de Combate</a>
+              </li>
+              <li><a href="#" class="text-white">Héroes y Clases</a></li>
+              <li>
+                <a href="#dragon-story" class="text-white"
+                  >Historia del Dragón</a
+                >
+              </li>
+              <li><a href="#Creditos" class="text-white">Créditos</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5 class="mb-3">Conéctate con Nosotros</h5>
+            <a href="#" class="text-white me-3"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="text-white me-3"
+              ><i class="bi bi-twitter-x"></i
+            ></a>
+            <a href="#" class="text-white me-3"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="#" class="text-white"><i class="bi bi-discord"></i></a>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col text-center">
+            <p class="mb-0">
+              &copy; 2024 Reinos de Midgart. Todos los derechos reservados.
+            </p>
+            <p class="mb-0">Diseñado por los Héroes de Midgart Dev Team.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./personajes.json"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
